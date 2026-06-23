@@ -21,28 +21,30 @@ export default function Home({ onSearch, onSimulate, toggleMenu, contextData }) 
   };
 
   const handleVoiceClick = () => {
-    // Simulated voice transcription capture for demo purposes
     const mockVoice = window.prompt("Demo Voice Input - Please describe what happened:", "");
     if (mockVoice) onSimulate(mockVoice);
   };
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-50 animate-fadeIn">
-      <Header toggleMenu={toggleMenu} />
-
-      <div className="px-6 -mt-4 relative z-20">
-        <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-5 text-center">
-          <h2 className="text-2xl font-bold text-[#001C40] mb-1">Take a deep breath.</h2>
-          <p className="text-gray-500 text-sm">We're here to help you sort this out.</p>
-          
-          <div className="mt-4 inline-flex items-center gap-1.5 bg-blue-50 text-blue-700 text-[10px] font-bold px-3 py-1.5 rounded-full">
-            <MapPin className="w-3 h-3" />
-            Location: {contextData.location.split(',')[0]}
+      
+      <div className="bg-[#001C40] rounded-b-[2rem] relative pb-10 mb-8 z-10 shadow-md">
+        <Header toggleMenu={toggleMenu} className="pt-6 px-6 text-white" />
+        
+        <div className="px-6 pt-6 pb-2">
+          <h2 className="text-[28px] leading-tight font-bold text-white mb-2">Take a deep breath.</h2>
+          <p className="text-blue-100 text-sm">We're here to help you sort this out.</p>
+        </div>
+        
+        <div className="absolute -bottom-5 left-0 w-full flex justify-center px-6">
+          <div className="bg-gradient-to-r from-gray-500 to-gray-400 border border-gray-400 text-white text-xs font-semibold px-5 py-2.5 rounded-full flex items-center gap-2 shadow-lg max-w-full">
+            <MapPin className="w-4 h-4 text-pink-300 shrink-0" />
+            <span className="truncate">{contextData.location.split(',')[0]}</span>
           </div>
         </div>
       </div>
 
-      <main className="px-5 pt-8 flex-1 flex flex-col gap-5 pb-8">
+      <main className="px-5 pt-2 flex-1 flex flex-col gap-5 pb-8">
         <div className="bg-white rounded-xl flex items-center px-4 py-3.5 shadow-sm border border-gray-100 focus-within:ring-2 focus-within:ring-blue-200 transition-all">
           <Search className="w-5 h-5 text-blue-400 mr-3 shrink-0" />
           <input 

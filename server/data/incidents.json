@@ -524,5 +524,337 @@
       "weather": "28°C, Clear",
       "deviceMetadata": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
     }
+  },
+  {
+    "type": "Analyzing Event",
+    "severity": "Unknown",
+    "estimatedTime": "Pending Assessment",
+    "icon": {},
+    "actionQueue": [
+      "Please ensure you are in a safe location.",
+      "We are connecting your context to a specialist."
+    ],
+    "helpLinks": [
+      "Call Emergency Hotline"
+    ],
+    "checklist": [
+      {
+        "id": 1,
+        "text": "Personal safety verified",
+        "done": false
+      }
+    ],
+    "id": "AnalyzingEvent_20260623_103358",
+    "createdAt": "2026-06-23T10:33:58.003Z",
+    "metadata": {
+      "timestamp": "04:01 PM",
+      "location": "Lat 12.85, Lng 77.78",
+      "weather": "28°C, Clear",
+      "deviceMetadata": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+    }
+  },
+  {
+    "type": "Analyzing Event",
+    "severity": "Unknown",
+    "estimatedTime": "Pending Assessment",
+    "icon": {},
+    "actionQueue": [
+      "Please ensure you are in a safe location.",
+      "We are connecting your context to a specialist."
+    ],
+    "helpLinks": [
+      "Call Emergency Hotline"
+    ],
+    "checklist": [
+      {
+        "id": 1,
+        "text": "Personal safety verified",
+        "done": false
+      }
+    ],
+    "id": "AnalyzingEvent_20260623_104310",
+    "createdAt": "2026-06-23T10:43:10.978Z",
+    "metadata": {
+      "timestamp": "04:12 PM",
+      "location": "Lat 12.85, Lng 77.78",
+      "weather": "28°C, Clear",
+      "deviceMetadata": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+    }
+  },
+  {
+    "type": "Analyzing Event",
+    "severity": "Unknown",
+    "estimatedTime": "Pending Assessment",
+    "icon": {},
+    "actionQueue": [
+      "Please ensure you are in a safe location.",
+      "We are connecting your context to a specialist."
+    ],
+    "helpLinks": [
+      "Call Emergency Hotline"
+    ],
+    "checklist": [
+      {
+        "id": 1,
+        "text": "Personal safety verified",
+        "done": false
+      }
+    ],
+    "id": "AnalyzingEvent_20260623_104411",
+    "createdAt": "2026-06-23T10:44:11.241Z",
+    "metadata": {
+      "timestamp": "04:12 PM",
+      "location": "Lat 12.85, Lng 77.78",
+      "weather": "28°C, Clear",
+      "deviceMetadata": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+    }
+  },
+  {
+    "type": "Water Leak",
+    "severity": "High",
+    "estimatedTime": "45 minutes",
+    "icon": {},
+    "actionQueue": [
+      "Turn off the main water supply valve to stop the flow.",
+      "Safely unplug any electronics near the water.",
+      "Move valuable items to a dry area."
+    ],
+    "helpLinks": [
+      "Find emergency plumber",
+      "Water mitigation crew"
+    ],
+    "checklist": [
+      {
+        "id": 1,
+        "text": "Safety secured",
+        "done": true
+      },
+      {
+        "id": 2,
+        "text": "Main water supply shut off",
+        "done": false
+      },
+      {
+        "id": 3,
+        "text": "Electronics unplugged",
+        "done": false
+      },
+      {
+        "id": 4,
+        "text": "Valuables moved",
+        "done": false
+      }
+    ],
+    "id": "WaterLeak_20260623_104422",
+    "createdAt": "2026-06-23T10:44:22.658Z",
+    "metadata": {
+      "timestamp": "04:12 PM",
+      "location": "Lat 12.85, Lng 77.78",
+      "weather": "28°C, Clear",
+      "deviceMetadata": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+    }
+  },
+  {
+    "type": "Vehicle Accident",
+    "severity": "Critical",
+    "estimatedTime": "2 hours",
+    "icon": {},
+    "actionQueue": [
+      "Ensure everyone is safe and move to the side of the road if possible.",
+      "Turn on your hazard lights.",
+      "Take 3-4 wide photos of the scene while it's fresh."
+    ],
+    "helpLinks": [
+      "Request Roadside Assistance",
+      "Call emergency services"
+    ],
+    "checklist": [
+      {
+        "id": 1,
+        "text": "Vehicles moved to safety",
+        "done": true
+      },
+      {
+        "id": 2,
+        "text": "Hazard lights activated",
+        "done": false
+      },
+      {
+        "id": 3,
+        "text": "Photos captured",
+        "done": false
+      },
+      {
+        "id": 4,
+        "text": "Exchange information",
+        "done": false
+      }
+    ],
+    "id": "VehicleAccident_20260623_104431",
+    "createdAt": "2026-06-23T10:44:31.165Z",
+    "metadata": {
+      "timestamp": "04:12 PM",
+      "location": "Lat 12.85, Lng 77.78",
+      "weather": "28°C, Clear",
+      "deviceMetadata": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+    }
+  },
+  {
+    "type": "Fraudulent Charge",
+    "severity": "Medium",
+    "estimatedTime": "15 minutes",
+    "icon": {},
+    "actionQueue": [
+      "Freeze your digital wallet and primary card.",
+      "Review your ledger for other unauthorized charges.",
+      "Let us know which specific charge is incorrect."
+    ],
+    "helpLinks": [
+      "Connect to Fraud Specialist",
+      "Issue temporary virtual card"
+    ],
+    "checklist": [
+      {
+        "id": 1,
+        "text": "Identity verified",
+        "done": true
+      },
+      {
+        "id": 2,
+        "text": "Primary account frozen",
+        "done": false
+      },
+      {
+        "id": 3,
+        "text": "Ledger reviewed",
+        "done": false
+      },
+      {
+        "id": 4,
+        "text": "Disputed charge flagged",
+        "done": false
+      }
+    ],
+    "id": "AnalyzingEvent_20260623_104511",
+    "createdAt": "2026-06-23T10:45:11.729Z"
+  },
+  {
+    "type": "Water Leak",
+    "severity": "High",
+    "estimatedTime": "45 minutes",
+    "icon": {},
+    "actionQueue": [
+      "Turn off the main water supply valve to stop the flow.",
+      "Safely unplug any electronics near the water.",
+      "Move valuable items to a dry area."
+    ],
+    "helpLinks": [
+      "Find emergency plumber",
+      "Water mitigation crew"
+    ],
+    "checklist": [
+      {
+        "id": 1,
+        "text": "Safety secured",
+        "done": true
+      },
+      {
+        "id": 2,
+        "text": "Main water supply shut off",
+        "done": true
+      },
+      {
+        "id": 3,
+        "text": "Electronics unplugged",
+        "done": true
+      },
+      {
+        "id": 4,
+        "text": "Valuables moved",
+        "done": true
+      }
+    ],
+    "id": "WaterLeak_20260623_113755",
+    "createdAt": "2026-06-23T11:37:55.055Z",
+    "metadata": {
+      "timestamp": "04:51 PM",
+      "location": "Lat 12.85, Lng 77.78",
+      "weather": "28°C, Clear",
+      "deviceMetadata": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+    }
+  },
+  {
+    "type": "Analyzing Event",
+    "severity": "Unknown",
+    "estimatedTime": "Pending Assessment",
+    "icon": {},
+    "actionQueue": [
+      "Please ensure you are in a safe location.",
+      "We are connecting your context to a specialist."
+    ],
+    "helpLinks": [
+      "Call Emergency Hotline"
+    ],
+    "checklist": [
+      {
+        "id": 1,
+        "text": "Personal safety verified",
+        "done": false
+      }
+    ],
+    "id": "AnalyzingEvent_20260623_114133",
+    "createdAt": "2026-06-23T11:41:33.680Z",
+    "metadata": {
+      "timestamp": "04:51 PM",
+      "location": "Lat 12.85, Lng 77.78",
+      "weather": "28°C, Clear",
+      "deviceMetadata": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+    }
+  },
+  {
+    "type": "Vehicle Accident",
+    "severity": "Critical",
+    "estimatedTime": "2 hours",
+    "icon": {},
+    "actionQueue": [
+      "Ensure everyone is safe and move to the side of the road if possible.",
+      "Turn on your hazard lights.",
+      "Take 3-4 wide photos of the scene while it's fresh.",
+      "Exchange information with other drivers."
+    ],
+    "helpLinks": [
+      "Request Roadside Assistance",
+      "Call emergency services"
+    ],
+    "checklist": [
+      {
+        "id": 1,
+        "text": "Vehicles moved to safety",
+        "done": true
+      },
+      {
+        "id": 2,
+        "text": "Hazard lights activated",
+        "done": true
+      },
+      {
+        "id": 3,
+        "text": "Photos captured",
+        "done": true
+      },
+      {
+        "id": 4,
+        "text": "Exchange information",
+        "done": true
+      }
+    ],
+    "id": "VehicleAccident_20260623_114648",
+    "createdAt": "2026-06-23T11:46:48.344Z",
+    "metadata": {
+      "timestamp": "05:16 PM",
+      "location": "Locating...",
+      "weather": "Analyzing...",
+      "deviceMetadata": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+    }
   }
 ]
