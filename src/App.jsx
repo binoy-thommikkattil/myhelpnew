@@ -1,3 +1,4 @@
+// src/App.jsx
 import React, { useState, useEffect } from 'react';
 import { Loader2, Home as HomeIcon, FolderHeart, Users } from 'lucide-react';
 import Home from './views/Home';
@@ -27,7 +28,7 @@ export default function App() {
             setContextData(prev => ({
               ...prev,
               location: `Lat ${pos.coords.latitude.toFixed(2)}, Lng ${pos.coords.longitude.toFixed(2)}`,
-              weather: "28°C, Clear" // Real API injection point
+              weather: "28°C, Clear"
             }));
           },
           (err) => {
@@ -49,15 +50,14 @@ export default function App() {
     
     const aiAssessment = await analyzeIncident(text, file);
     
-    // Required Format: EventType_DATE_TIME 
     const dateStr = new Date().toISOString().replace(/T/, '_').replace(/\..+/, '').replace(/[-:]/g, ''); 
     const typeStr = aiAssessment.type.replace(/\s+/g, '');
     
     const newIncident = {
       ...aiAssessment,
-      id: `${typeStr}_${dateStr}`, // e.g. WaterLeak_20260623_153054
+      id: `${typeStr}_${dateStr}`,
       createdAt: new Date().toISOString(),
-      metadata: contextData // Send full technical metadata to backend, hide from UI
+      metadata: contextData 
     };
     
     setDetectedEvent(newIncident);
@@ -80,6 +80,15 @@ export default function App() {
       console.warn('Backend not reachable. Updating local cache only.');
     }
     setIncidents(prev => prev.map(i => i.id === updatedEvent.id ? updatedEvent : i));
+  };
+
+  const handleDeleteIncident = async (id) => {
+    setIncidents(prev => prev.filter(i => i.id !== id));
+    try {
+      await incidentService.deleteIncident(id);
+    } catch (error) {
+      console.warn('Backend not reachable for delete operation.');
+    }
   };
 
   return (
@@ -139,6 +148,7 @@ export default function App() {
             setDetectedEvent(incident);
             setAppState('COMMAND_CENTER');
           }}
+          onDelete={handleDeleteIncident}
         />
       )}
 

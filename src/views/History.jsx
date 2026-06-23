@@ -1,10 +1,11 @@
-import React from 'react';
+// src/views/History.jsx
+import React, { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { ArrowRight, Clock, AlertCircle } from 'lucide-react';
+import { ArrowRight, Clock, AlertCircle, Trash2 } from 'lucide-react';
 
-export default function History({ incidents, onResume, onBack }) {
-  // Sort incidents newest first
+export default function History({ incidents, onResume, onBack, onDelete }) {
+  const [incidentToDelete, setIncidentToDelete] = useState(null);
   const sortedIncidents = [...incidents].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 
   return (
@@ -17,7 +18,7 @@ export default function History({ incidents, onResume, onBack }) {
         <p className="text-xs text-blue-200 mt-1">Review or resume your active incidents.</p>
       </div>
 
-      <main className="flex-1 p-5 space-y-4">
+      <main className="flex-1 p-5 space-y-4 relative">
         {sortedIncidents.length === 0 ? (
           <div className="bg-white p-8 rounded-2xl border border-gray-100 text-center shadow-sm">
             <AlertCircle className="w-10 h-10 text-gray-300 mx-auto mb-3" />
@@ -32,6 +33,7 @@ export default function History({ incidents, onResume, onBack }) {
             const completed = incident.checklist?.filter(c => c.done).length || 0;
             const total = incident.checklist?.length || 1;
             const pct = Math.round((completed / total) * 100);
+            const isCompleted = completed === total && total > 0;
 
             return (
               <div key={incident.id} className="bg-white rounded-2xl shadow-sm border border-gray-100 p-4 relative overflow-hidden group">
@@ -42,8 +44,13 @@ export default function History({ incidents, onResume, onBack }) {
                       <Clock className="w-3 h-3" /> {formattedDate} at {formattedTime}
                     </div>
                   </div>
-                  <div className="bg-gray-50 text-gray-500 text-[10px] px-2 py-1 rounded font-mono border border-gray-200">
-                    {incident.id.split('_')[0]}
+                  <div className="flex items-center gap-2">
+                    <div className="bg-gray-50 text-gray-500 text-[10px] px-2 py-1 rounded font-mono border border-gray-200">
+                      {incident.id.split('_')[0]}
+                    </div>
+                    <button onClick={() => setIncidentToDelete(incident.id)} className="text-gray-400 hover:text-red-500 transition-colors p-1">
+                      <Trash2 className="w-4 h-4" />
+                    </button>
                   </div>
                 </div>
                 
@@ -55,12 +62,25 @@ export default function History({ incidents, onResume, onBack }) {
                      </div>
                   </div>
                   <button onClick={() => onResume(incident)} className="text-[#001C40] font-bold text-xs flex items-center gap-1 hover:text-blue-600 transition-colors">
-                    Resume <ArrowRight className="w-3 h-3" />
+                    {isCompleted ? 'Review' : 'Resume'} <ArrowRight className="w-3 h-3" />
                   </button>
                 </div>
               </div>
             );
           })
+        )}
+
+        {incidentToDelete && (
+          <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
+            <div className="bg-white rounded-xl p-6 w-full max-w-sm shadow-2xl">
+              <h3 className="font-bold text-lg text-[#001C40] mb-2">Delete Recovery?</h3>
+              <p className="text-sm text-gray-600 mb-6">Are you sure you want to remove this incident from your history? This action cannot be undone.</p>
+              <div className="flex gap-3">
+                <button onClick={() => setIncidentToDelete(null)} className="flex-1 bg-gray-100 text-gray-700 font-bold py-2.5 rounded-lg hover:bg-gray-200 transition-colors">Cancel</button>
+                <button onClick={() => { onDelete(incidentToDelete); setIncidentToDelete(null); }} className="flex-1 bg-red-600 text-white font-bold py-2.5 rounded-lg hover:bg-red-700 transition-colors shadow-sm">Delete</button>
+              </div>
+            </div>
+          </div>
         )}
       </main>
       <Footer />

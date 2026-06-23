@@ -1,3 +1,4 @@
+// src/views/Home.jsx
 import React, { useRef } from 'react';
 import { Search, MapPin, Camera, Mic } from 'lucide-react';
 import Header from '../components/Header';
@@ -14,7 +15,15 @@ export default function Home({ onSearch, onSimulate, toggleMenu, contextData }) 
   const handleCameraClick = () => fileInputRef.current.click();
 
   const handlePhotoCaptured = (e) => {
-    if (e.target.files && e.target.files.length > 0) onSimulate('accident', e.target.files[0]);
+    if (e.target.files && e.target.files.length > 0) {
+      onSimulate('Analyzing image contents...', e.target.files[0]);
+    }
+  };
+
+  const handleVoiceClick = () => {
+    // Simulated voice transcription capture for demo purposes
+    const mockVoice = window.prompt("Demo Voice Input - Please describe what happened:", "");
+    if (mockVoice) onSimulate(mockVoice);
   };
 
   return (
@@ -52,13 +61,13 @@ export default function Home({ onSearch, onSimulate, toggleMenu, contextData }) 
             <div className="bg-blue-50 p-4 rounded-full group-hover:bg-blue-100 transition-colors"><Camera className="w-7 h-7 text-blue-600" /></div>
             <div className="text-center"><p className="text-sm font-bold text-[#001C40]">Take a Photo</p></div>
           </button>
-          <button onClick={() => onSimulate('water')} className="bg-white border border-gray-100 p-5 rounded-2xl flex flex-col items-center justify-center gap-3 shadow-sm hover:shadow-md transition-all group">
+          <button onClick={handleVoiceClick} className="bg-white border border-gray-100 p-5 rounded-2xl flex flex-col items-center justify-center gap-3 shadow-sm hover:shadow-md transition-all group">
             <div className="bg-emerald-50 p-4 rounded-full group-hover:bg-emerald-100 transition-colors"><Mic className="w-7 h-7 text-emerald-600" /></div>
             <div className="text-center"><p className="text-sm font-bold text-[#001C40]">Use Voice</p></div>
           </button>
         </div>
 
-        <button onClick={() => onSimulate('fraud')} className="w-full bg-[#001C40] text-white rounded-2xl p-5 flex items-center justify-between shadow-md mt-2 hover:bg-blue-900 transition-colors">
+        <button onClick={() => onSimulate("SOS Request: User needs immediate step-by-step guidance.")} className="w-full bg-[#001C40] text-white rounded-2xl p-5 flex items-center justify-between shadow-md mt-2 hover:bg-blue-900 transition-colors">
           <div className="flex items-center gap-4">
             <div className="bg-pink-400 text-white text-[11px] font-black px-2.5 py-1.5 rounded-md tracking-widest shadow-sm">SOS</div>
             <div className="text-left">

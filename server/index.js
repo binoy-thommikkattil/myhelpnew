@@ -1,3 +1,4 @@
+// server/index.js
 import dotenv from 'dotenv';
 import express from 'express';
 import cors from 'cors';
@@ -5,7 +6,6 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import FileIncidentRepository from './repository/FileIncidentRepository.js';
 
-// Recreate __dirname for ES Modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -29,6 +29,15 @@ app.post('/api/incidents', async (req, res) => {
     res.json(incident);
   } catch (error) {
     res.status(500).json({ error: 'Failed to save incident' });
+  }
+});
+
+app.delete('/api/incidents/:id', async (req, res) => {
+  try {
+    await repository.delete(req.params.id);
+    res.json({ success: true });
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to delete incident' });
   }
 });
 

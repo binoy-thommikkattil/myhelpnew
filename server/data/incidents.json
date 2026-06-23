@@ -328,5 +328,201 @@
       "weather": "28°C, Clear",
       "deviceMetadata": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
     }
+  },
+  {
+    "type": "Fraudulent Charge",
+    "severity": "Medium",
+    "estimatedTime": "15 minutes",
+    "icon": {},
+    "actionQueue": [
+      "Freeze your digital wallet and primary card.",
+      "Review your ledger for other unauthorized charges.",
+      "Let us know which specific charge is incorrect."
+    ],
+    "helpLinks": [
+      "Connect to Fraud Specialist",
+      "Issue temporary virtual card"
+    ],
+    "checklist": [
+      {
+        "id": 1,
+        "text": "Identity verified",
+        "done": true
+      },
+      {
+        "id": 2,
+        "text": "Primary account frozen",
+        "done": false
+      },
+      {
+        "id": 3,
+        "text": "Ledger reviewed",
+        "done": false
+      },
+      {
+        "id": 4,
+        "text": "Disputed charge flagged",
+        "done": false
+      }
+    ],
+    "id": "VehicleAccident_20260623_101728",
+    "createdAt": "2026-06-23T10:17:28.327Z"
+  },
+  {
+    "type": "Water Leak",
+    "severity": "High",
+    "estimatedTime": "45 minutes",
+    "icon": {},
+    "actionQueue": [
+      "Turn off the main water supply valve to stop the flow.",
+      "Safely unplug any electronics near the water.",
+      "Move valuable items to a dry area."
+    ],
+    "helpLinks": [
+      "Find emergency plumber",
+      "Water mitigation crew"
+    ],
+    "checklist": [
+      {
+        "id": 1,
+        "text": "Safety secured",
+        "done": true
+      },
+      {
+        "id": 2,
+        "text": "Main water supply shut off",
+        "done": false
+      },
+      {
+        "id": 3,
+        "text": "Electronics unplugged",
+        "done": false
+      },
+      {
+        "id": 4,
+        "text": "Valuables moved",
+        "done": false
+      }
+    ],
+    "id": "WaterLeak_20260623_102000",
+    "createdAt": "2026-06-23T10:20:00.763Z",
+    "metadata": {
+      "timestamp": "03:45 PM",
+      "location": "GPS Unavailable",
+      "weather": null,
+      "deviceMetadata": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+    }
+  },
+  {
+    "type": "Water Leak",
+    "severity": "High",
+    "estimatedTime": "45 minutes",
+    "icon": {},
+    "actionQueue": [
+      "Turn off the main water supply valve to stop the flow.",
+      "Safely unplug any electronics near the water.",
+      "Move valuable items to a dry area."
+    ],
+    "helpLinks": [
+      "Find emergency plumber",
+      "Water mitigation crew"
+    ],
+    "checklist": [
+      {
+        "id": 1,
+        "text": "Safety secured",
+        "done": true
+      },
+      {
+        "id": 2,
+        "text": "Main water supply shut off",
+        "done": false
+      },
+      {
+        "id": 3,
+        "text": "Electronics unplugged",
+        "done": false
+      },
+      {
+        "id": 4,
+        "text": "Valuables moved",
+        "done": false
+      }
+    ],
+    "id": "WaterLeak_20260623_102006",
+    "createdAt": "2026-06-23T10:20:06.652Z",
+    "metadata": {
+      "timestamp": "03:45 PM",
+      "location": "GPS Unavailable",
+      "weather": null,
+      "deviceMetadata": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+    }
+  },
+  {
+    "type": "Water Leak",
+    "severity": "High",
+    "estimatedTime": "45 minutes",
+    "icon": {},
+    "actionQueue": [
+      "Turn off the main water supply valve to stop the flow.",
+      "Safely unplug any electronics near the water.",
+      "Move valuable items to a dry area."
+    ],
+    "helpLinks": [
+      "Find emergency plumber",
+      "Water mitigation crew"
+    ],
+    "checklist": [
+      {
+        "id": 1,
+        "text": "Safety secured",
+        "done": true
+      },
+      {
+        "id": 2,
+        "text": "Main water supply shut off",
+        "done": true
+      },
+      {
+        "id": 3,
+        "text": "Electronics unplugged",
+        "done": true
+      },
+      {
+        "id": 4,
+        "text": "Valuables moved",
+        "done": true
+      }
+    ],
+    "id": "AnalyzingEvent_20260623_103151",
+    "createdAt": "2026-06-23T10:31:51.263Z"
+  },
+  {
+    "type": "Analyzing Event",
+    "severity": "Unknown",
+    "estimatedTime": "Pending Assessment",
+    "icon": {},
+    "actionQueue": [
+      "Please ensure you are in a safe location.",
+      "We are connecting your context to a specialist."
+    ],
+    "helpLinks": [
+      "Call Emergency Hotline"
+    ],
+    "checklist": [
+      {
+        "id": 1,
+        "text": "Personal safety verified",
+        "done": false
+      }
+    ],
+    "id": "AnalyzingEvent_20260623_103234",
+    "createdAt": "2026-06-23T10:32:34.856Z",
+    "metadata": {
+      "timestamp": "04:01 PM",
+      "location": "Lat 12.85, Lng 77.78",
+      "weather": "28°C, Clear",
+      "deviceMetadata": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+    }
   }
 ]

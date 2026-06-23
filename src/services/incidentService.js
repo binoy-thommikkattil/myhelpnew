@@ -26,5 +26,18 @@ export const incidentService = {
       console.error('Failed to save incident:', error);
       throw error;
     }
+  },
+
+  async deleteIncident(id) {
+    try {
+      const res = await fetch(`${API_URL}/api/incidents/${id}`, {
+        method: 'DELETE'
+      });
+      if (!res.ok) throw new Error('Network response was not ok');
+      return await res.json();
+    } catch (error) {
+      console.error('Failed to delete incident:', error);
+      throw error;
+    }
   }
 };
